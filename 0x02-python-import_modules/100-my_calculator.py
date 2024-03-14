@@ -5,20 +5,19 @@ import sys
 if __name__ == "__main__":
 
     if len(sys.argv) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b> ")
         sys.exit(1)
     else:
         operator = sys.argv[2]
         a, b = int(sys.argv[1]), int(sys.argv[3])
-        match(operator):
-            case "+":
+        if operator ==  "+":
                 print("{} + {} = {}".format(a, b, add(a, b)))
-            case "-":
+        elif operator == "-":
                 print("{} + {} = {}".format(a, b, sub(a, b)))
-            case "*":
+        elif operator ==  "*":
                 print("{} + {} = {}".format(a, b, mul(a, b)))
-            case "/":
+        elif operator ==  "/":
                 print("{} + {} = {}".format(a, b, div(a, b)))
-            case _:
+        else :
                 print("Unknown operator. Available operators: +, -, * and /")
                 sys.exit(1)
