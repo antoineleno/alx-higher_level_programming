@@ -20,6 +20,10 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		length++;
 	}
+	if (length == 1)
+	{
+		return (1)
+	}
 	for (i = 0; i < length; i++)
 	{
 		if (i < length / 2)
