@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def multiply_by_2(a_dictionary):
     copy_of_dic = {}
     copy_of_dic = a_dictionary.copy()
