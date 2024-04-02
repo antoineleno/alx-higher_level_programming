@@ -60,15 +60,12 @@ class Square:
                 Raise the Type error if the value is not an interger
                 Raise the Value error if the value is less than 0
         """
-        if len(value) != 2 and not isinstance(value, int):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__position = value
-    """Function area that return the square area"""
-    def area(self):
-        return self.__size**2
+        self.__position = value
 
     def my_print(self):
         """Print the square with the # character."""
