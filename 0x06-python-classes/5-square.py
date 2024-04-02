@@ -1,13 +1,16 @@
+#!/usr/bin/python3
 """Definiton of a class Square that defines
 
     a square by: (based on 4-square.py)
 """
+
+
 class Square:
     """A class square
-    
+
         Args:
             size (int): Size to calculate the square
-            
+
         Return: The square area
     """
     def __init__(self, size=0):
@@ -17,9 +20,10 @@ class Square:
     def size(self):
         """Function size to return the value of size"""
         return self.__size
+
     @size.setter
     def size(self, value):
-        """Function size setter to set the value of size 
+        """Function size setter to set the value of size
             base on certains conditions
 
             Args :
@@ -45,5 +49,3 @@ class Square:
             for j in range(self.__size):
                 print("#", end="")
             print()
-            
-
