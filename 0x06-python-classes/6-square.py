@@ -60,7 +60,7 @@ class Square:
                 Raise the Type error if the value is not an interger
                 Raise the Value error if the value is less than 0
         """
-        if len(value) != 2 and not isinstance(value, int):
+        if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif value < 0:
             raise ValueError("size must be >= 0")
