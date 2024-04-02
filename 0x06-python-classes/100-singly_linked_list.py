@@ -1,10 +1,13 @@
+#!/usr/bin/python3
 """Definiton of a class Square that defines
 
     a square by: (based on 6-square.py)
 """
+
+
 class Node:
     """A clasee Node: that defines a node of a singly linked list
-    
+
         Args:
             data (int): value to be inset
             next_node: next node
@@ -42,7 +45,7 @@ class Node:
 
 
 class SinglyLinkedList:
-    """Singley linkedList: A singly linked list to print infos about the list"""
+    """Singley linkedList: A singly linked list to print info"""
     def __init__(self):
         self.head = None
 

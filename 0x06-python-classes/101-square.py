@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Definiton of a class Square that defines
 
     a square by: (based on 4-square.py)
