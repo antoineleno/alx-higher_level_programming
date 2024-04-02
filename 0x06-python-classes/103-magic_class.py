@@ -3,7 +3,6 @@
 """Define a MagicClass matching exactly a bytecode provided by Holberton."""
 
 import math
-import dis
 
 
 class MagicClass:
@@ -27,4 +26,3 @@ class MagicClass:
     def circumference(self):
         """Return The circumference of the MagicClass."""
         return (2 * math.pi * self.__radius)
-
