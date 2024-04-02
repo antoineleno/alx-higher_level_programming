@@ -3,15 +3,17 @@
 
     a square by: (based on 4-square.py)
 """
+
+
 class Square:
     """A class square
-    
+
         Args:
             size (int): Size to calculate the square
-            
+
         Return: The square area
     """
-    def __init__(self,size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
@@ -19,9 +21,10 @@ class Square:
     def size(self):
         """Function size to return the value of size"""
         return self.__size
+
     @size.setter
     def size(self, value):
-        """Function size setter to set the value of size 
+        """Function size setter to set the value of size
             base on certains conditions
 
             Args :
@@ -38,13 +41,15 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
     @property
     def position(self):
         """Function size to return the value of size"""
         return self.__position
+
     @size.setter
     def position(self, value):
-        """Function size setter to set the value of size 
+        """Function size setter to set the value of size
             base on certains conditions
 
             Args :
@@ -64,7 +69,7 @@ class Square:
     """Function area that return the square area"""
     def area(self):
         return self.__size**2
-    """Function my_print to print in stdout the square with the character #"""
+
     def my_print(self):
         """Print the square with the # character."""
         if self.__size == 0:
@@ -75,10 +80,9 @@ class Square:
         for i in range(0, self.__size):
             [print(" ", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
-            if i != self.__size -1:
+            if i != self.__size - 1:
                 print()
 
     def __str__(self):
         self.my_print()
         return ""
-
