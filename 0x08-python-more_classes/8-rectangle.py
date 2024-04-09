@@ -96,8 +96,7 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         """static method to return the comaparaison"""
         if not isinstance(rect_1, Rectangle):
-            raise TypeError("{} must be an instance of Rectangle".
-                            format(rect_1))
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("{} must be an instance of Rectangle".
                             format(rect_2))
