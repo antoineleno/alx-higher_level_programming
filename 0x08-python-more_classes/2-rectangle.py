@@ -3,9 +3,10 @@
 
     a rectangle by: (based on 1-rectangle.py)
 """
+
+
 class Rectangle:
     """A class rectangle
-    
         Args:
             size (int): Size to calculate the square
         Raise:
@@ -20,6 +21,7 @@ class Rectangle:
     def width(self):
         """A private instance attribute width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """Propoerty setter width
@@ -39,12 +41,12 @@ class Rectangle:
     def height(self):
         """A private instance attribute width"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Propoerty setter width
             Args:
                 value (int): Value to be used
-                
             Return:
                     The width
         """
@@ -53,10 +55,12 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self.__height = value          
+            self.__height = value
+
     def area(self):
         """area function to return the area"""
         return self.__height * self.__width
+
     def perimeter(self):
         """perimeter function to return the perimeter"""
         if self.__width == 0 or self.__height == 0:
