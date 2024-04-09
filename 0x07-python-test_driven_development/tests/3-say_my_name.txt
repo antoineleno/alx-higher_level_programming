@@ -1,0 +1,41 @@
+``The 3-say_my_name`` module
+=============================
+
+Using: ``say_my_name``
+----------------------
+
+Import function from module
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test where first_name and last_name are string
+    >>> say_my_name("Antoine", "LENO")
+    My name is Antoine LENO
+
+Test where first_name is not a string
+    >>> say_my_name(4, "LENO")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test where last name is not a string
+    >>> say_my_name("Antoine", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Test where first_name and last_name are all not string
+    >>> say_my_name(8, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test where first_name is a key word
+    >>> say_my_name(Return, 4)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Return' is not defined
+
+Test case where last_name is not provided
+    >>> say_my_name("Antoine")
+    My name is Antoine 
+

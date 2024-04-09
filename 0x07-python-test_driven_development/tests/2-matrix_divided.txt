@@ -1,0 +1,34 @@
+The ``2-matrix_divided`` module
+================================
+
+
+Using: ``matrix_divided``
+------------------------
+
+Import function from module
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test where all elements are integers and div != 0
+    >>> matrix_divided([[1, 2, 3],[4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test where all elements are float and div != 0
+    >>> matrix_divided([[1.33, 2.52, 3.25],[4.12, 5.25, 6.05]], 2)
+    [[0.67, 1.26, 1.62], [2.06, 2.62, 3.02]]
+
+Test mix int and float and div != 0
+    >>> matrix_divided([[12, 15.36, 46],[57, 20.00, 78.36]], 4)
+    [[3.0, 3.84, 11.5], [14.25, 5.0, 19.59]]
+
+Test case where elements are not int or float and div != 0
+    >>> matrix_divided([['a', 15.36, 46],[57, 20.00, 78.36]], 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+Test case where elements are all int and div == 0
+    >>> matrix_divided([[12, 15.36, 46],[57, 20.00, 78.36]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+

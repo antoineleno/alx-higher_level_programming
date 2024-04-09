@@ -1,0 +1,40 @@
+The ``100-matrix_mul`` module
+=============================
+
+Using: matrix_mul
+------------------
+
+Import function from module
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Test case correct matrix both
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+
+Test second case
+    >>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+    [[13, 16]]
+
+Test case where m_a is not a list
+    >>> matrix_mul(5, [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+Test case where m_b is not a list
+    >>> matrix_mul([[1, 2], [3, 4]], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list
+
+Test where m_a can't be multiplied by m_b
+    >>> matrix_mul([[1, 2, 3]], [[1, 2]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+
+Test missing 2 args:
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
