@@ -3,9 +3,10 @@
 
     a rectangle by: (based on 0-rectangle.py)
 """
+
+
 class Rectangle:
     """A class rectangle
-    
         Args:
             width (int): width of the rectangle
             height (int) : height of the rectangle
@@ -21,6 +22,7 @@ class Rectangle:
     def width(self):
         """A private instance attribute width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """Propoerty setter width
@@ -40,18 +42,17 @@ class Rectangle:
     def height(self):
         """A private instance attribute width"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Propoerty setter width
             Args:
                 value (int): Value to be used
-                
             Return:
                     The width
         """
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self.__height = value          
+        self.__height = value
