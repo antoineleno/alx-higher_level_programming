@@ -66,6 +66,22 @@ class Rectangle:
         else:
             self.__height = value
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """static method to return the comaparaison"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Class method that return a new Rectangle instance"""
+        return cls(size, size)
+
     def area(self):
         """area function to return the area"""
         return self.__height * self.__width
@@ -91,19 +107,3 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """static method to return the comaparaison"""
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """Class method that return a new Rectangle instance"""
-        return cls(size, size)
