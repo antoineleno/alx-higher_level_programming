@@ -10,7 +10,6 @@ def say_my_name(first_name, last_name=""):
             last_name  (string) : last name of the person
         Raises:
             TypeError: if first_name or last_name is not a string
-            
         Return:
             No value to be returned
     """
@@ -20,7 +19,3 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
     else:
         print("My name is {} {}".format(first_name, last_name))
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile('tests/3-say_my_name.txt')

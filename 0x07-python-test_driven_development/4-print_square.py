@@ -7,11 +7,9 @@ def print_square(size):
     print_square: function to print a square with character #
         Args:
             size(int): size of the square
-            
         Raises:
             TypeError: if size is not an integer
             or size is less than or equal to zero
-            
         Return:
             No value to be returned
         """
@@ -25,8 +23,3 @@ def print_square(size):
         for j in range(size):
             print("#", end="")
         print()
-    
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile('tests/4-print_square.txt')
