@@ -1,0 +1,36 @@
+The ``19-copy_list`` module
+============================
+
+Using: copy_list
+-----------------
+
+Import function from module
+    >>> copy_list = __import__('19-copy_list').copy_list
+
+Test case all elements are integers
+    >>> copy_list([1, 2, 3])
+    [1, 2, 3]
+
+Test case where elements are float and integers
+    >>> copy_list([1.22, 2.36, 3])
+    [1.22, 2.36, 3]
+
+Test case where elements are only float
+    >>> copy_list([1.22, 2.36, 3.36])
+    [1.22, 2.36, 3.36]
+
+Test case where elements are characters
+    >>> copy_list(['A', 'B', 'C'])
+    ['A', 'B', 'C']
+
+Test case where elements are characters and (int, float)
+    >>> copy_list(['A', 'B', 'C', 3, 33.32])
+    ['A', 'B', 'C', 3, 33.32]
+
+Test case where elements are strings
+    >>> copy_list(["antoine", "leno"])
+    ['antoine', 'leno']
+
+Test case big integers
+    >>> copy_list([111111111111111111111, 125555558888888888888])
+    [111111111111111111111, 125555558888888888888]

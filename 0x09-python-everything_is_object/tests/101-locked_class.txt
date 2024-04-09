@@ -1,0 +1,4 @@
+The ``101-magic_string`` module
+===============================
+
+Using: 

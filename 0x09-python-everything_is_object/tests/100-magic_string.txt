@@ -1,0 +1,48 @@
+The ``100-magic_string`` module
+===============================
+
+Using: magic_string
+--------------------
+
+Import function from module
+    >>> magic_string = __import__('100-magic_string').magic_string
+
+Test case 1
+>>> magic_string()
+'BestSchool'
+
+Test case 2
+>>> magic_string()
+'BestSchool, BestSchool'
+
+Test case 3
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool'
+
+Test case 4
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool'
+
+Test case 5
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool, BestSchool'
+
+Test case 6
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool'
+
+Test case 7
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool'
+
+Test case 8
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool'
+
+Test case 9
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool'
+
+Test case 10
+>>> magic_string()
+'BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool, BestSchool'
