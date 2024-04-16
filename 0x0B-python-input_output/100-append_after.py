@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """100-append_after"""
+
+
 def append_after(filename="", search_string="", new_string=""):
     """append_after
 
@@ -21,4 +23,3 @@ def append_after(filename="", search_string="", new_string=""):
                 text += line
     with open(filename, "w", encoding="utf-8") as new_file:
         new_file.write(text)
-    
