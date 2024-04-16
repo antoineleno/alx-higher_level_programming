@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """load_to_json_file"""
+import json
 
 
 def load_from_json_file(filename):
@@ -9,7 +9,7 @@ def load_from_json_file(filename):
     Args:
         my_obj (object): object to be converted
         filename (txt): file
-    
+
     Return:
         the python object loaded from the json file.
     """
