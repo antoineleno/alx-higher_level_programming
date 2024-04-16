@@ -55,4 +55,3 @@ def create_list(my_list):
             my_new_list.append(m)
 
     return my_new_list
-
