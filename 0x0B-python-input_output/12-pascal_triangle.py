@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """12-pascal_triangle"""
+
+
 def pascal_triangle(n):
     """pascall_tringle
 
@@ -30,14 +32,13 @@ def pascal_triangle(n):
                     created_list = antoine
         del my_triangle[0]
         return my_triangle
-    
 
 
 def create_list(my_list):
     """create_list - function to return a new_list
 
     Args:
-        my_list (list): list to create its new copy 
+        my_list (list): list to create its new copy
 
     Returns:
         new list
@@ -52,10 +53,6 @@ def create_list(my_list):
         else:
             m = my_list[i] + my_list[i - 1]
             my_new_list.append(m)
-    
+
     return my_new_list
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile('tests/12-pascal_triangle.txt')
-    
