@@ -12,8 +12,10 @@ def pascal_triangle(n):
         The matrix representation
     """
     my_triangle = [[]]
+
     if n <= 0:
-        return my_triangle
+        my_list = []
+        return my_list
     else:
         created_list = []
         my_list = [1]
