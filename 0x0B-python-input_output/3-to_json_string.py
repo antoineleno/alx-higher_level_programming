@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """to_json_string: function to convert an object to json string"""
+import json
 
 
 def to_json_string(my_obj):
