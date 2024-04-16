@@ -16,12 +16,12 @@ class Student:
         Returns:
             dictionary_repr:dictionarry representation of the class
         """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
+        if (type(attrs) is list and
+                all(type(ele) is str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+
     def reload_from_json(self, json):
         """Replace all attributes of Student instance"""
         for key, value in json.items():
             setattr(self, key, value)
-
