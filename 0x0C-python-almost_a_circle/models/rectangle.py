@@ -89,9 +89,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """return the string representation of the rectangle"""
-        rect_repr = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        rect_repr = f"[Rectangle]({self.id}) {self.__x}/
+        {self.__y} - {self.__width}/{self.__height}"
         return rect_repr
-    
+
     def update(self, *args, **kwargs):
         """update to update attributes value"""
         if args:
@@ -100,10 +101,9 @@ class Rectangle(Base):
                 setattr(self, my_args[i], arg)
         else:
             for key, value in kwargs.items():
-                setattr(self, key, value)            
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """return the custom dictionnary representation"""
-        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
-    
-    
+        return {'id': self.id, 'width': self.width,
+                'height': self.height, 'x': self.x, 'y': self.y}
