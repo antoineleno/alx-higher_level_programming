@@ -89,8 +89,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """return the string representation of the rectangle"""
-        rect_repr = f"[Rectangle]({self.id}) {self.__x}/
-        {self.__y} - {self.__width}/{self.__height}"
+        rect_repr = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
         return rect_repr
 
     def update(self, *args, **kwargs):
