@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Test base """
+
+
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -8,7 +11,6 @@ import json
 import os
 
 
-"""TestBase"""
 class TestBase(unittest.TestCase):
     """Test Base
 
@@ -73,6 +75,7 @@ class TestBase(unittest.TestCase):
         os.remove("Rectangle.json")
 
     def test_create_rectangle(self):
+        """Test create rectangle"""
         r1 = Rectangle(3, 5, 1)
         r1_dictionary = r1.to_dictionary()
 
@@ -87,6 +90,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r1.id, r2.id)
 
     def test_load_from_file_rectangle(self):
+        """Test load from file rectangle"""
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
 
