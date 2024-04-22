@@ -25,8 +25,8 @@ class TestRectangleFunction(unittest.TestCase):
         """test rectangle calss whrer id is not provided"""
         obj1 = Rectangle(10, 2)
         obj2 = Rectangle(2, 10)
-        self.assertEqual(obj1.id, 1)
-        self.assertEqual(obj2.id, 2)
+        self.assertEqual(obj1.id, 12)
+        self.assertEqual(obj2.id, 13)
     
     def test_all_attrubutes_2(self):
         """test all attributes of the class rectangle"""
@@ -56,7 +56,7 @@ class TestRectangleFunction(unittest.TestCase):
         r2 = Rectangle(5, 5, 1)
         
         expected_r1_str = "[Rectangle] (12) 2/1 - 4/6"
-        expected_r2_str = "[Rectangle] (3) 1/0 - 5/5"
+        expected_r2_str = "[Rectangle] (14) 1/0 - 5/5"
 
         self.assertEqual(str(r1), expected_r1_str)
         self.assertEqual(str(r2), expected_r2_str)

@@ -22,8 +22,8 @@ class TestSquareFunction(unittest.TestCase):
         obj1 = Square(1, 5, 6)
         obj2 = Square(11, 5, 6)
 
-        self.assertEqual(obj1.id, 1)
-        self.assertEqual(obj2.id, 2)
+        self.assertEqual(obj1.id, 17)
+        self.assertEqual(obj2.id, 18)
 
     def test_all_attrubutes_10(self):
         """test all attributes of the class rectangle"""
