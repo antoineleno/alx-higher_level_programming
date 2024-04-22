@@ -3,7 +3,7 @@
 
 
 import json
-import csv
+#import csv
 import turtle
 
 
@@ -70,17 +70,6 @@ class Base:
         except IOError:
             return []
 
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        """method to save to csv"""
-        filename = cls.__name__ + ".csv"
-        with open(filename, "w", newline="") as file:
-            writer = csv.writer(file)
-            for ob in list_objs:
-                if cls.__name__ == "Rectangle":
-                    writer.writerow([ob.id, ob.width, ob.height, ob.x, ob.y])
-                elif cls.__name__ == "Square":
-                    writer.writerow([ob.id, ob.size, ob.x, ob.y])
 
     @classmethod
     def load_from_file_csv(cls):
