@@ -3,9 +3,12 @@
 import json
 import csv
 import turtle
+
+
 class Base:
     """Base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Constructor method
 
@@ -17,6 +20,7 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """to json string: method to convert a string to json"""
@@ -63,18 +67,18 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-    
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """method to save to csv"""
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as file:
             writer = csv.writer(file)
-            for obj in list_objs:
+            for ob in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([ob.id, ob.width, ob.height, ob.x, ob.y])
                 elif cls.__name__ == "Square":
-                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+                    writer.writerow([ob.id, ob.size, ob.x, ob.y])
 
     @classmethod
     def load_from_file_csv(cls):
@@ -83,16 +87,19 @@ class Base:
         try:
             with open(filename, "r", newline="") as file:
                 reader = csv.reader(file)
-                for row in reader:
+                for r in reader:
                     if cls.__name__ == "Rectangle":
-                        obj = cls.create(width=int(row[1]), height=int(row[2]), x=int(row[3]), y=int(row[4]), id=int(row[0]))
+                        obj = cls.create(width=int(r[1]), height=int(r[2]),
+                                         x=int(r[3]), y=int(r[4]),
+                                         id=int(r[0]))
                     elif cls.__name__ == "Square":
-                        obj = cls.create(size=int(row[1]), x=int(row[2]), y=int(row[3]), id=int(row[0]))
+                        obj = cls.create(size=int(r[1]), x=int(r[2]),
+                                         y=int(r[3]), id=int(r[0]))
                     instances.append(obj)
         except FileNotFoundError:
             pass
         return instances
-    
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         """method to draw a list of rectangle and list of square"""
@@ -128,6 +135,6 @@ class Base:
             turtle.goto(k * 150, -300)
             turtle.pendown()
             k += 1
-        
+
         turtle.hideturtle()
         turtle.done()
