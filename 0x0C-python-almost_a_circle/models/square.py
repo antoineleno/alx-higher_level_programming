@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Class square that inheritate from rectangle"""
-
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """Square class"""
+
     def __init__(self, size, x=0, y=0, id=None):
         self.size = size
         self.x = y
@@ -14,9 +14,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Return string represenation of an object"""
         sqr_repr = f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
         return sqr_repr
-    
+
     @property
     def size(self):
         return self.width
@@ -34,7 +35,7 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-    
+
     def to_dictionary(self):
+        """Return the dictionnary representation"""
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
-    
