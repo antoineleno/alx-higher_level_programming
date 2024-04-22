@@ -82,6 +82,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """load from file csv"""
         filename = cls.__name__ + ".csv"
         instances = []
         try:
