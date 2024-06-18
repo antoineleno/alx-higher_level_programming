@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const NumberOfArguments = process.argv.length - 2;
-mynumber = [];
+const mynumber = [];
 if (NumberOfArguments === 0 || NumberOfArguments === 1) {
   console.log(0);
 } else {
@@ -11,7 +11,7 @@ if (NumberOfArguments === 0 || NumberOfArguments === 1) {
   }
   const index = mynumber.indexOf(Math.max(...mynumber));
   if (index !== -1) {
-        mynumber.splice(index, 1);
+    mynumber.splice(index, 1);
   }
   console.log(Math.max(...mynumber));
 }
