@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
-function add(a, b) {
-  return a + b;
-}
-module.exports = add;
+// This line indicates that this file should be executed using the Node.js interpreter.
+
+exports.add = function(a, b) {
+  return (a + b);
+};
       
