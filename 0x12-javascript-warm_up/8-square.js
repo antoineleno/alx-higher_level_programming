@@ -5,7 +5,6 @@ const size = process.argv[2];
 const sizeInt = parseInt(size);
 
 if (!isNaN(sizeInt)) {
-
   for (let i = 0; i < sizeInt; i++) {
     let row = '';
     for (let j = 0; j < sizeInt; j++) {
@@ -14,5 +13,5 @@ if (!isNaN(sizeInt)) {
     console.log(row);
   }
 } else {
-  console.log("Missing size");
+  console.log('Missing size');
 }
