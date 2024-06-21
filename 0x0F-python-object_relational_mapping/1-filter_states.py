@@ -30,8 +30,6 @@ def list_all_states(username, db_password, db_name):
         cursor.close()
 
 
-
-
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
