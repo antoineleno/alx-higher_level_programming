@@ -27,7 +27,6 @@ def list_all_states(username, db_password, db_name, state_searched):
     for row in result:
         print(row)
         cursor.close()
-        db.close()
 
 
 if __name__ == "__main__":
