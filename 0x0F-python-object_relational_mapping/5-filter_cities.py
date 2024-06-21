@@ -25,9 +25,10 @@ def list_all_states(username, db_password, db_name, statename):
     my_query = (f'select name from cities where state_id in (select id from states where name="{statename}")')
     cursor.execute(my_query)
     result = cursor.fetchall()
-    for row in result:
-        print(row)
-        cursor.close()
+    rows = cursor.fetchall()
+
+    city_names = [row[0] for row in result]
+    print(", ".join(city_names))
 
 
 if __name__ == "__main__":
