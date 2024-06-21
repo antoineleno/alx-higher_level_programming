@@ -31,7 +31,7 @@ def list_all_states(username, db_password, db_name, state_searched):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state>".format(sys.argv[0]))
+        print("Usage: {} <user> <pwd> <db> <state>".format(sys.argv[0]))
         sys.exit(1)
     else:
         list_all_states(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
