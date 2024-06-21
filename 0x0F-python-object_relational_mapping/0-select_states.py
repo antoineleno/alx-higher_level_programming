@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import MySQLdb
+"""
+0-Select states modeule
+"""
 
 db = MySQLdb.connect(host="localhost", port=3306,db="hbtn_0e_0_usa")
 cursor = db.cursor()
