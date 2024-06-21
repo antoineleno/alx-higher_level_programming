@@ -21,12 +21,14 @@ def list_all_states(username, db_password, db_name):
                          db=db_name)
 
     cursor = db.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC")
+    my_query = ("SELECT cities.id, cities.name,"
+                "states.name FROM cities INNER JOIN "
+                "states ON cities.state_id = states.id ORDER BY cities.id ASC")
+    cursor.execute(my_query)
     result = cursor.fetchall()
     for row in result:
         print(row)
         cursor.close()
-
 
 
 if __name__ == "__main__":
