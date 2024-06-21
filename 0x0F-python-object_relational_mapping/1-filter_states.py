@@ -22,7 +22,7 @@ def list_all_states(username, db_password, db_name):
 
     cursor = db.cursor()
     MY_query = ("SELECT * FROM states WHERE "
-                "name COLLATE utf8mb4_bin LIKE 'C%' ORDER BY states.id ASC")
+                "name COLLATE utf8mb4_bin LIKE 'N%' ORDER BY states.id ASC")
     cursor.execute(MY_query)
     result = cursor.fetchall()
     for row in result:
