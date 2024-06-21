@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-1-filter_states
+2-My filter states modeule
 """
 import MySQLdb
 import sys
@@ -27,7 +27,7 @@ def list_all_states(username, db_password, db_name):
     result = cursor.fetchall()
     for row in result:
         print(row)
-        
+        cursor.close()
 
 
 if __name__ == "__main__":
