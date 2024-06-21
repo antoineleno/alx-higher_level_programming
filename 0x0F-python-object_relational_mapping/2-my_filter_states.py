@@ -22,7 +22,8 @@ def list_all_states(username, db_password, db_name, state_searched):
                          db=db_name)
 
     cursor = db.cursor()
-    cursor.execute(f'SELECT * FROM states WHERE name="{state_searched}"')
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_searched)
+    cursor.execute(query)
     result = cursor.fetchall()
     for row in result:
         print(row)
