@@ -1,17 +1,22 @@
 #!/usr/bin/python3
-"""Lists states"""
-
-from sqlalchemy import Column, Integer, String
+"""
+model_state
+"""
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
 
-
 class State(Base):
-    """Class representing the states table"""
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False,
-                autoincrement=True, unique=True)
-    name = Column(String(128), nullable=False)
+        """state
+
+        Args:
+            Base (class): class
+        """
+        __tablename__ = "state"
+        id = Column(Integer, autoincrement=True, unique=True, nullable=False, primary_key=True)
+        name = Column(String(118), nullable=False)
+        
