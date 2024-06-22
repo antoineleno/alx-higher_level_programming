@@ -4,6 +4,7 @@ model_state module
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 import sys
