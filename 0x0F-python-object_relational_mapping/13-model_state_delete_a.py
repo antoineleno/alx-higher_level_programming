@@ -34,8 +34,4 @@ def list_all_states(username, db_password, db_name):
 
 
 if __name__ == "__main__":
-    if (len(sys.argv) != 4):
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
-    else:
-        list_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
+    list_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
