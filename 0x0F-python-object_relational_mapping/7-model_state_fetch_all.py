@@ -17,8 +17,7 @@ def list_all_states(username, db_password, db_name):
         db_password (string): db password
         db_name (string): db name
     """
-    
-    db_url = f"mysql+mysqlconnector://{username}:{db_password}@localhost:3306/{db_name}"
+
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'
         .format(username, db_password,
@@ -30,6 +29,7 @@ def list_all_states(username, db_password, db_name):
     for state in states:
         print("{}: {}".format(state.id, state.name))
     session.close()
+
 
 if __name__ == "__main__":
     if (len(sys.argv) != 4):
