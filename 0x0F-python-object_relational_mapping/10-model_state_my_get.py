@@ -25,10 +25,9 @@ def list_all_states(username, db_password, db_name, state_name):
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session = session()
-    states = session.query(State).filter(State.name == state_name).all()
-    if states:
-        for state in states:
-            print("{}: {}".format(state.id, state.name))
+    state = session.query(State).filter(State.name == state_name).all()
+    if state:
+        print("{}".format(state[0].id))
     else:
         print("Not found")
     session.close()
