@@ -28,6 +28,7 @@ def list_all_states(username, db_password, db_name):
     new_state = State(name = "Louisiana")
     session.add(new_state)
     session.commit()
+    print(new_state.id)
     session.close()
 
 
