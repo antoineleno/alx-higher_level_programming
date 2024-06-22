@@ -19,3 +19,8 @@ class State(Base):
         id = Column(Integer, autoincrement=True, unique=True, nullable=False, primary_key=True)
         name = Column(String(118), nullable=False)
         
+DATABASE_URL = "mysql+mysqlconnector://username:password@localhost:3306/database_name"
+engine = create_engine(DATABASE_URL, echo=True)
+Base.metadata.create_all(engine)
+Session = sessionmaker(bind=engine)
+session = Session()
