@@ -25,7 +25,7 @@ def list_all_states(username, db_password, db_name):
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session = session()
-    new_state = State(name = "Louisiana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
     print(new_state.id)
