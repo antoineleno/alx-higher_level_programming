@@ -20,8 +20,8 @@ def list_all_states(username, db_password, db_name):
 
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost:3306/{}'
-        .format(username, db_password,
-                db_name), pool_pre_ping=True)
+        .format(sys.argv[1], sys.argv[2],
+                sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session = session()
