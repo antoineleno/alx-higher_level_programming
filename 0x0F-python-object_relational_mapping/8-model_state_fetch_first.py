@@ -26,10 +26,9 @@ def list_all_states(username, db_password, db_name):
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session = session()
-    states = session.query(State).order_by(State.id).first()
-    if states:
-        for state in states:
-                print("{}: {}".format(state.id, state.name))
+    state = session.query(State).order_by(State.id).first()
+    if state:
+             print("{}: {}".format(state.id, state.name))
     else:
         print("Nothing")
     session.close()
