@@ -25,7 +25,7 @@ def list_all_states(username, db_password, db_name):
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session = session()
-    states = session.query(State).filter(State.name.like('%A%')).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('%A%')).all()
     for state in states:
         print("{}: {}".format(state.id, state.name))
     session.close()
