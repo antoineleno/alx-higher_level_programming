@@ -19,7 +19,7 @@ def list_all_states(username, db_password, db_name):
     """
 
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost/{}'
+        'mysql+mysqldb://{}:{}@localhost:3306/{}'
         .format(username, db_password,
                 db_name), pool_pre_ping=True)
     Base.metadata.create_all(engine)
