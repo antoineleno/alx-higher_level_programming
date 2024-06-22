@@ -19,7 +19,10 @@ def list_all_states(username, db_password, db_name):
     """
     
     db_url = f"mysql+mysqlconnector://{username}:{db_password}@localhost:3306/{db_name}"
-    engine = create_engine(db_url,echo=True)
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'
+        .format(username, db_password,
+                db_name), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session = session()
