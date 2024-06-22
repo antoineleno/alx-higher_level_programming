@@ -28,7 +28,7 @@ def list_all_states(username, db_password, db_name):
     session = session()
     state = session.query(State).order_by(State.id).first()
     if state:
-             print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
     else:
         print("Nothing")
     session.close()
