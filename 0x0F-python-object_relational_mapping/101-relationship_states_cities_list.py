@@ -8,8 +8,8 @@ from model_state import Base, State
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 import sys
-from model_state import Base, State
-from model_city import City
+from relationship_state import Base, State
+from relationship_city import City
 
 
 def list_all_states(username, db_password, db_name):
