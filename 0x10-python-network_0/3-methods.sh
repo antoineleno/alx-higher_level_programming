@@ -1,5 +1,3 @@
 #!/bin/bash
 # Bash script that takes in a URL, and display all htpp methods
-
-URL=$1
-curl -sI -X OPTIONS "$URL" | grep -i '^allow:' | awk '{print $2}'
+curl -sI -X OPTIONS "$1" | grep -i '^allow:' | awk '{print $2}'
